@@ -3,6 +3,7 @@
 		"lint": "xo && stylelint source/*.css",
 		"test": "npm run lint && ava && npm run build",
 		"build": "webpack --mode=production",
+		"build-safari": "cp -r distribution RefinedTwitter.safariextension/distribution || echo Command npm build first and try again",
 		"watch": "webpack --mode=development --watch",
 		"release:cws": "cd distribution && webstore upload --auto-publish",
 		"release": "run-s build update-version release:cws",
